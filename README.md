@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/3459374/36045604-e2de52b6-0dde-11e8-9b44-50bebc7fa82e.png" alt="DogeCodes">
+</p>
+
+# React Chat
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
