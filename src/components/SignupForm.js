@@ -37,32 +37,14 @@ class SignupForm extends React.Component {
     return isValid;
   }
 
-  handleUsernameInputChange = (event) => {
+  handleInputChange = (event) => {
     event.persist();
-    this.setState((prevState) => ({
-      username: {
-        ...prevState.username,
-        value: event.target.value,
-      },
-    }));
-  }
+    const { name, value } = event.target;
 
-  handlePasswordInputChange = (event) => {
-    event.persist();
     this.setState((prevState) => ({
-      password: {
-        ...prevState.password,
-        value: event.target.value,
-      },
-    }));
-  }
-
-  handleRepeatedPasswordInputChange = (event) => {
-    event.persist();
-    this.setState((prevState) => ({
-      repeatedPassword: {
-        ...prevState.repeatedPassword,
-        value: event.target.value,
+      [name]: {
+        ...prevState[name],
+        value,
       },
     }));
   }
@@ -78,7 +60,20 @@ class SignupForm extends React.Component {
 
     console.log('Sign up:', username.value, password.value);
 
-    // ...
+    fetch('http://localhost:8000/v1/signup', {
+      method: "POST",
+      body: JSON.stringify({
+        username: username.value,
+        password: password.value,
+      }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(json => console.log(json))
+      .catch(reason => console.error(reason));
   }
 
   render() {
@@ -94,33 +89,36 @@ class SignupForm extends React.Component {
           placeholder="Type your username..."
           type="text"
           margin="normal"
+          name="username"
           autoComplete="username"
           value={username.value}
-          onChange={this.handleUsernameInputChange}
+          onChange={this.handleInputChange}
           error={!username.isValid}
         />
         <TextField
           required
           fullWidth
           label="Password"
-          placeholder="Type your username..."
+          placeholder="Type your password..."
           type="password"
           margin="normal"
+          name="password"
           autoComplete="new-password"
           value={password.value}
-          onChange={this.handlePasswordInputChange}
+          onChange={this.handleInputChange}
           error={!password.isValid}
         />
          <TextField
           required
           fullWidth
           label="Repeat password"
-          placeholder="Type your username..."
+          placeholder="Repeat your password..."
           type="password"
           margin="normal"
+          name="repeatedPassword"
           autoComplete="new-password"
           value={repeatedPassword.value}
-          onChange={this.handleRepeatedPasswordInputChange}
+          onChange={this.handleInputChange}
           error={!repeatedPassword.isValid}
         />
         <Button
