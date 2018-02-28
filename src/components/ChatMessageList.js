@@ -1,5 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
+import Paper from 'material-ui/Paper';
 import ChatMessage from './ChatMessage';
 
 const styles = theme => ({
@@ -10,6 +13,9 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 3,
     paddingBottom: '120px',
   },
+  paper: {
+    padding: theme.spacing.unit * 3
+  }
 });
 
 class ChatMessageList extends React.Component {
@@ -29,16 +35,37 @@ class ChatMessageList extends React.Component {
   }
 
   render() {
-    const { classes, messages } = this.props;
-  
-    return (
+    const { classes, messages, match } = this.props;
+    
+    // If there's no active chat, then show a tip
+    if (!match.params.chatId) {
+      return (
+        <Paper className={classes.paper}>
+          <Typography variant="display1" gutterBottom>
+            Start messaging…
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Use <strong>Global</strong> to explore communities around here.
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Use <strong>Recents</strong> to see your recent conversations.
+          </Typography>
+        </Paper>
+      );
+    }
+
+    return messages ? (
       <div className={classes.messagesWrapper} ref="messagesWrapper">
-        {messages && messages.map((message, index) => (
+        {messages.map((message, index) => (
           <ChatMessage key={index} {...message} />
         ))}
       </div>
+    ) : (
+      <Typography variant="display1">
+        There is no messages yet...
+      </Typography>
     );
   }
 }
 
-export default withStyles(styles)(ChatMessageList);
+export default withRouter(withStyles(styles)(ChatMessageList));

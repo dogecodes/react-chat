@@ -1,8 +1,8 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Route, Redirect, withRouter } from 'react-router-dom'
-import { recieveAuth } from '../actions';
+import { withRouter, Route, Redirect } from 'react-router-dom';
+import { recieveAuth } from '../actions/auth';
 
 class PrivateRoute extends React.Component {
   componentDidMount() {
@@ -23,7 +23,7 @@ class PrivateRoute extends React.Component {
           }} />
         )
       )} />
-    );
+    )
   }
 }
 

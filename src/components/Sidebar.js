@@ -5,6 +5,7 @@ import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
 import ChatList from './ChatList';
+import NewChatButton from './NewChatButton';
 import RestoreIcon from 'material-ui-icons/Restore';
 import ExploreIcon from 'material-ui-icons/Explore';
 
@@ -37,6 +38,7 @@ const Sidebar = ({ classes, chats }) => (
     </div>
     <Divider />
     <ChatList chats={chats} />
+    <NewChatButton />
     <BottomNavigation showLabels>
       <BottomNavigationAction label="My Chats" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Explore" icon={<ExploreIcon />} />
