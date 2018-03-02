@@ -35,8 +35,8 @@ class ChatMessageList extends React.Component {
   }
 
   render() {
-    const { classes, messages, match } = this.props;
-    
+    const { classes, messages, match, activeUser } = this.props;
+
     // If there's no active chat, then show a tip
     if (!match.params.chatId) {
       return (
@@ -54,10 +54,14 @@ class ChatMessageList extends React.Component {
       );
     }
 
-    return messages ? (
+    return messages && messages.length ? (
       <div className={classes.messagesWrapper} ref="messagesWrapper">
         {messages.map((message, index) => (
-          <ChatMessage key={index} {...message} />
+          <ChatMessage
+            key={index}
+            activeUser={activeUser}
+            {...message}
+          />
         ))}
       </div>
     ) : (

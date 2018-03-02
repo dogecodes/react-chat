@@ -1,14 +1,12 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import ChatHeader from './ChatHeader';
 import Chat from './Chat';
-
-import { messages } from '../mock-data';
+import ChatHeader from './ChatHeader';
 
 class ChatPage extends React.Component {
   componentDidMount() {
     const { match, fetchAllChats, fetchMyChats, setActiveChat } = this.props;
-
+    
     Promise.all([
       fetchAllChats(),
       fetchMyChats(),
@@ -18,7 +16,7 @@ class ChatPage extends React.Component {
         if (match.params.chatId) {
           setActiveChat(match.params.chatId);
         }
-      })
+      });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,30 +30,36 @@ class ChatPage extends React.Component {
   }
 
   render() {
-    const { chats } = this.props;
+    const {
+      logout, chats, activeUser,
+      createChat, joinChat, leaveChat, deleteChat, sendMessage,
+      messages, editUser
+    } = this.props;
 
     return (
       <React.Fragment>
         <ChatHeader
-          // ...
-          // you need to pass additional props, for example:
-          // active user, active chat, leaveChat, deleteChat, logout, editUser
+          activeUser={activeUser}
+          activeChat={chats.active}
+          leaveChat={leaveChat}
+          deleteChat={deleteChat}
+          logout={logout}
+          editUser={editUser}
         />
         <Sidebar
           chats={chats}
-          // ...
-          // you need to pass additional props, for example:
-          // createChat
+          createChat={createChat}
         />
         <Chat
           messages={messages}
-          // ...
-          // you need to pass additional props, for example:
-          // active user, joinChat, messages
+          activeChat={chats.active}
+          activeUser={activeUser}
+          sendMessage={sendMessage}
+          joinChat={joinChat}
         />
       </React.Fragment>
     );
   }
-};
+}
 
 export default ChatPage;
