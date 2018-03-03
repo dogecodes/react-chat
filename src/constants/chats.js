@@ -28,7 +28,3 @@ export const LEAVE_CHAT_FAILURE = Symbol('chats/LEAVE_CHAT_FAILURE');
 export const DELETE_CHAT_REQUEST = Symbol('chats/DELETE_CHAT_REQUEST');
 export const DELETE_CHAT_SUCCESS = Symbol('chats/DELETE_CHAT_SUCCESS');
 export const DELETE_CHAT_FAILURE = Symbol('chats/DELETE_CHAT_FAILURE');
-
-export const SEND_MESSAGE_REQUEST = Symbol('chats/SEND_MESSAGE_REQUEST');
-export const SEND_MESSAGE_SUCCESS = Symbol('chats/SEND_MESSAGE_SUCCESS');
-export const SEND_MESSAGE_FAILURE = Symbol('chats/SEND_MESSAGE_FAILURE');
