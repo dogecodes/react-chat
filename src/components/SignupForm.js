@@ -6,8 +6,8 @@ import Button from 'material-ui/Button';
 const styles = theme => ({
   signUpButton: {
     marginTop: theme.spacing.unit * 2,
-  }
-})
+  },
+});
 
 class SignupForm extends React.Component {
   state = {
@@ -41,7 +41,7 @@ class SignupForm extends React.Component {
     event.persist();
     const { name, value } = event.target;
 
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       [name]: {
         ...prevState[name],
         value,
@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
 
     if (!this.validate()) {
       return;
-    } 
+    }
 
     const { username, password } = this.state;
 
@@ -93,7 +93,7 @@ class SignupForm extends React.Component {
           onChange={this.handleInputChange}
           error={!password.isValid}
         />
-         <TextField
+        <TextField
           required
           fullWidth
           label="Repeat password"

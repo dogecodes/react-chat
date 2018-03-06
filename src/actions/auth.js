@@ -17,7 +17,7 @@ export function signup(username, password) {
       username,
       password,
     })
-      .then(json => {
+      .then((json) => {
         if (!json.token) {
           throw new Error('Token has not been provided!');
         }
@@ -28,7 +28,7 @@ export function signup(username, password) {
         dispatch({
           type: types.SIGNUP_SUCCESS,
           payload: json,
-        })
+        });
       })
       .catch(reason => dispatch({
         type: types.SIGNUP_FAILURE,
@@ -53,7 +53,7 @@ export function login(username, password) {
       username,
       password,
     })
-      .then(json => {
+      .then((json) => {
         if (!json.token) {
           throw new Error('Token has not been provided!');
         }
@@ -64,7 +64,7 @@ export function login(username, password) {
         dispatch({
           type: types.LOGIN_SUCCESS,
           payload: json,
-        })
+        });
       })
       .catch(reason => dispatch({
         type: types.LOGIN_FAILURE,
@@ -82,19 +82,19 @@ export function logout() {
     }
 
     dispatch({
-      type: types.LOGOUT_REQUEST
+      type: types.LOGOUT_REQUEST,
     });
 
     return callApi('/logout')
-      .then(json => {
+      .then((json) => {
         // Remove JWT from localStorage
         localStorage.removeItem('token');
 
         // redirect to welcome in case of failure
         dispatch({
           type: types.LOGOUT_SUCCESS,
-          payload: json
-        })
+          payload: json,
+        });
       })
       .catch(reason => dispatch({
         type: types.LOGOUT_FAILURE,
@@ -109,7 +109,7 @@ export function recieveAuth() {
 
     dispatch({
       type: types.RECIEVE_AUTH_REQUEST,
-    })
+    });
 
     return callApi('/users/me', token)
       .then(json => dispatch({
@@ -120,5 +120,5 @@ export function recieveAuth() {
         type: types.RECIEVE_AUTH_FAILURE,
         payload: reason,
       }));
-  }
+  };
 }

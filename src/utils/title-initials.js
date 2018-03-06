@@ -7,6 +7,7 @@ export default function titleInitials(title) {
       .slice(0, 2)
       .join('');
   } catch (e) {
+    // eslint-disable-next-line
     console.error(e);
     return '🐶';
   }

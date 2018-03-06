@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: 0 */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
@@ -14,8 +15,8 @@ const styles = theme => ({
     paddingBottom: '120px',
   },
   paper: {
-    padding: theme.spacing.unit * 3
-  }
+    padding: theme.spacing.unit * 3,
+  },
 });
 
 class ChatMessageList extends React.Component {
@@ -28,14 +29,15 @@ class ChatMessageList extends React.Component {
   }
 
   scrollDownHistory() {
-    const messagesWrapper = this.refs.messagesWrapper;
-    if (messagesWrapper) {
-      messagesWrapper.scrollTop = messagesWrapper.scrollHeight;
+    if (this.messagesWrapper) {
+      this.messagesWrapper.scrollTop = this.messagesWrapper.scrollHeight;
     }
   }
 
   render() {
-    const { classes, messages, match, activeUser } = this.props;
+    const {
+      classes, messages, match, activeUser,
+    } = this.props;
 
     // If there's no active chat, then show a tip
     if (!match.params.chatId) {
@@ -55,10 +57,13 @@ class ChatMessageList extends React.Component {
     }
 
     return messages && messages.length ? (
-      <div className={classes.messagesWrapper} ref="messagesWrapper">
-        {messages.map((message, index) => (
+      <div
+        className={classes.messagesWrapper}
+        ref={(wrapper) => { this.messagesWrapper = wrapper; }}
+      >
+        {messages.map(message => (
           <ChatMessage
-            key={index}
+            key={message._id}
             activeUser={activeUser}
             {...message}
           />

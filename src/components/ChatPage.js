@@ -6,8 +6,10 @@ import ErrorMessage from './ErrorMessage';
 
 class ChatPage extends React.Component {
   componentDidMount() {
-    const { match, fetchAllChats, fetchMyChats, setActiveChat, socketsConnect, mountChat } = this.props;
-    
+    const {
+      match, fetchAllChats, fetchMyChats, setActiveChat, socketsConnect, mountChat,
+    } = this.props;
+
     Promise.all([
       fetchAllChats(),
       fetchMyChats(),
@@ -26,7 +28,9 @@ class ChatPage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { match: { params }, setActiveChat, unmountChat, mountChat } = this.props;
+    const {
+      match: { params }, setActiveChat, unmountChat, mountChat,
+    } = this.props;
     const { params: nextParams } = nextProps.match;
 
     // If we change route, then fetch messages from chat by chatID

@@ -12,7 +12,7 @@ const styles = theme => ({
     position: 'absolute',
     left: 'auto',
     right: theme.spacing.unit * 3,
-    bottom: theme.spacing.unit * 3 + 48, // + bottom navigation
+    bottom: (theme.spacing.unit * 3) + 48, // + bottom navigation
   },
   modalWrapper: {
     display: 'flex',
@@ -22,8 +22,8 @@ const styles = theme => ({
   modal: {
     width: '30%',
     minWidth: '300px',
-    padding: theme.spacing.unit * 3
-  }
+    padding: theme.spacing.unit * 3,
+  },
 });
 
 class NewChatButton extends React.Component {
@@ -32,11 +32,11 @@ class NewChatButton extends React.Component {
     title: {
       value: '',
       isValid: true,
-    }
+    },
   }
 
   toggleModal = () => {
-    this.setState({ open: !this.state.open })
+    this.setState({ open: !this.state.open });
   }
 
   handleTitleChange = (event) => {
@@ -44,7 +44,7 @@ class NewChatButton extends React.Component {
       title: {
         value: event.target.value,
         isValid: true,
-      }
+      },
     });
   }
 
@@ -58,8 +58,8 @@ class NewChatButton extends React.Component {
         title: {
           value: title.value,
           isValid: false,
-        }
-      })
+        },
+      });
 
       return;
     }

@@ -18,8 +18,8 @@ const styles = theme => ({
   modal: {
     width: '30%',
     minWidth: '300px',
-    padding: theme.spacing.unit * 3
-  }
+    padding: theme.spacing.unit * 3,
+  },
 });
 
 class UserMenu extends React.Component {
@@ -36,7 +36,7 @@ class UserMenu extends React.Component {
       username: nextProps.activeUser.username,
       firstName: nextProps.activeUser.firstName,
       lastName: nextProps.activeUser.lastName,
-    })
+    });
   }
 
   handleClick = (event) => {
@@ -54,7 +54,7 @@ class UserMenu extends React.Component {
   }
 
   toggleEditProfileModal = () => {
-    this.setState({ isModalOpen: !this.state.isModalOpen })
+    this.setState({ isModalOpen: !this.state.isModalOpen });
     this.handleClose();
   }
 
@@ -93,8 +93,8 @@ class UserMenu extends React.Component {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-         <MenuItem onClick={this.toggleEditProfileModal}>Edit Profile</MenuItem>
-         <MenuItem onClick={this.handleLogoutClick}>Logout</MenuItem>
+          <MenuItem onClick={this.toggleEditProfileModal}>Edit Profile</MenuItem>
+          <MenuItem onClick={this.handleLogoutClick}>Logout</MenuItem>
         </Menu>
         <Modal
           open={isModalOpen}

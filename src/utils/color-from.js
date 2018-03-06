@@ -14,7 +14,7 @@ import blueGrey from 'material-ui/colors/blueGrey';
 
 const colors = [
   red, pink, purple, indigo, blue, teal, green, lightGreen, amber,
-  orange, deepOrange, deepPurple, blueGrey
+  orange, deepOrange, deepPurple, blueGrey,
 ];
 
 export default function colorFrom(string) {
@@ -29,6 +29,7 @@ export default function colorFrom(string) {
 
     return colors[colorIndex][500];
   } catch (e) {
+    // eslint-disable-next-line
     console.error(e);
     return blueGrey[500];
   }

@@ -22,8 +22,8 @@ export default function auth(state = initialState, action) {
       return {
         ...state,
         isAuthenticated: true,
-        user: action.payload.user
-      }
+        user: action.payload.user,
+      };
     case types.SIGNUP_FAILURE:
     case types.LOGIN_FAILURE:
     case types.RECIEVE_AUTH_FAILURE:
