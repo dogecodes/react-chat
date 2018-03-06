@@ -5,6 +5,7 @@ import { redirect } from './services';
 export function missingSocketConnection() {
   return {
     type: types.SOCKETS_CONNECTION_MISSING,
+    payload: new Error('Missing connection!'),
   }
 }
 
@@ -34,15 +35,17 @@ export function socketsConnect() {
       });
     });
 
-    socket.on('error', () => {
+    socket.on('error', (error) => {
       dispatch({
-        type: types.SOCKETS_CONNECTION_FAILURE
+        type: types.SOCKETS_CONNECTION_FAILURE,
+        payload: new Error(`Connection: ${error}`),
       });
     });
 
     socket.on('connect_error', () => {
       dispatch({
-        type: types.SOCKETS_CONNECTION_FAILURE
+        type: types.SOCKETS_CONNECTION_FAILURE,
+        payload: new Error('We have lost a connection :('),
       });
     });
 

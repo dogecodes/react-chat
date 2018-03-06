@@ -16,13 +16,14 @@ const styles = theme => ({
   },
 });
 
-const Chat = ({ classes, messages, activeChat, activeUser, joinChat, sendMessage }) => (
+const Chat = ({ classes, messages, activeChat, activeUser, joinChat, sendMessage, isConnected }) => (
   <main className={classes.chatLayout}>
     <ChatMessageList
       messages={messages}
       activeUser={activeUser}
     />
     {activeChat && <MessageInput
+      disabled={!isConnected}
       sendMessage={sendMessage}
       showJoinButton={!activeUser.isChatMember}
       onJoinButtonClick={() => joinChat(activeChat._id)}
