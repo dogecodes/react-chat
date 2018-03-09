@@ -23,7 +23,7 @@ class SignupForm extends React.Component {
       value: '',
       isValid: true,
     },
-  }
+  };
 
   validate = () => {
     const { password, repeatedPassword } = this.state;
@@ -35,7 +35,7 @@ class SignupForm extends React.Component {
     });
 
     return isValid;
-  }
+  };
 
   handleInputChange = (event) => {
     event.persist();
@@ -47,7 +47,7 @@ class SignupForm extends React.Component {
         value,
       },
     }));
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
     const { username, password } = this.state;
 
     this.props.onSubmit(username.value, password.value);
-  }
+  };
 
   render() {
     const { classes } = this.props;

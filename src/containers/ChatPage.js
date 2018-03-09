@@ -1,7 +1,15 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
-import { fetchAllChats, fetchMyChats, setActiveChat, createChat, deleteChat, joinChat, leaveChat } from '../actions/chats';
+import {
+  fetchAllChats,
+  fetchMyChats,
+  setActiveChat,
+  createChat,
+  deleteChat,
+  joinChat,
+  leaveChat,
+} from '../actions/chats';
 import { editUser } from '../actions/users';
 import { sendMessage, mountChat, unmountChat, socketsConnect } from '../actions/sockets';
 import * as fromChats from '../reducers/chats';
@@ -30,24 +38,24 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  fetchAllChats,
-  fetchMyChats,
-  setActiveChat,
-  logout,
-  createChat,
-  deleteChat,
-  joinChat,
-  leaveChat,
-  editUser,
-  sendMessage,
-  mountChat,
-  unmountChat,
-  socketsConnect,
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      fetchAllChats,
+      fetchMyChats,
+      setActiveChat,
+      logout,
+      createChat,
+      deleteChat,
+      joinChat,
+      leaveChat,
+      editUser,
+      sendMessage,
+      mountChat,
+      unmountChat,
+      socketsConnect,
+    },
+    dispatch,
+  );
 
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ChatPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ChatPage);

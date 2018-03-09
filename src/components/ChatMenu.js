@@ -6,7 +6,7 @@ import MoreIcon from 'material-ui-icons/MoreVert';
 class ChatMenu extends React.Component {
   state = {
     anchorEl: null,
-  }
+  };
 
   handleClick = (event) => {
     this.setState({ anchorEl: event.currentTarget });
@@ -19,12 +19,12 @@ class ChatMenu extends React.Component {
   handleLeaveClick = () => {
     this.handleClose();
     this.props.onLeaveClick();
-  }
+  };
 
   handleDeleteClick = () => {
     this.handleClose();
     this.props.onDeleteClick();
-  }
+  };
 
   render() {
     const { activeUser, disabled } = this.props;

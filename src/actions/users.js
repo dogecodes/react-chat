@@ -16,16 +16,23 @@ export function editUser({ username, firstName, lastName }) {
       type: types.EDIT_USER_REQUEST,
     });
 
-    return callApi('/users/me', token, { method: 'POST' }, {
-      data: { username, firstName, lastName },
-    })
-      .then(json => dispatch({
-        type: types.EDIT_USER_SUCCESS,
-        payload: json,
-      }))
-      .catch(reason => dispatch({
-        type: types.EDIT_USER_FAILURE,
-        payload: reason,
-      }));
+    return callApi(
+      '/users/me',
+      token,
+      { method: 'POST' },
+      {
+        data: { username, firstName, lastName },
+      },
+    )
+      .then(json =>
+        dispatch({
+          type: types.EDIT_USER_SUCCESS,
+          payload: json,
+        }))
+      .catch(reason =>
+        dispatch({
+          type: types.EDIT_USER_FAILURE,
+          payload: reason,
+        }));
   };
 }

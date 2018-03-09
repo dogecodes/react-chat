@@ -29,7 +29,7 @@ class UserMenu extends React.Component {
     username: '',
     firstName: '',
     lastName: '',
-  }
+  };
 
   componentWillReceiveProps(nextProps) {
     this.setState({
@@ -51,12 +51,12 @@ class UserMenu extends React.Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-  }
+  };
 
   toggleEditProfileModal = () => {
     this.setState({ isModalOpen: !this.state.isModalOpen });
     this.handleClose();
-  }
+  };
 
   handleSaveClick = () => {
     this.props.onEditProfileClick({
@@ -65,12 +65,12 @@ class UserMenu extends React.Component {
       lastName: this.state.lastName,
     });
     this.toggleEditProfileModal();
-  }
+  };
 
   handleLogoutClick = () => {
     this.props.onLogoutClick();
     this.handleClose();
-  }
+  };
 
   render() {
     const { anchorEl, isModalOpen } = this.state;
@@ -139,9 +139,7 @@ class UserMenu extends React.Component {
             <Button color="primary" onClick={this.handleSaveClick}>
               Save
             </Button>
-            <Button onClick={this.toggleEditProfileModal}>
-              Close
-            </Button>
+            <Button onClick={this.toggleEditProfileModal}>Close</Button>
           </Paper>
         </Modal>
       </React.Fragment>

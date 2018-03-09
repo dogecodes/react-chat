@@ -16,7 +16,7 @@ class ErrorMessage extends React.Component {
 
   handleCloseSnackbar = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     const { error } = this.props;

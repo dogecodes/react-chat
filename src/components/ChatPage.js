@@ -7,13 +7,15 @@ import ErrorMessage from './ErrorMessage';
 class ChatPage extends React.Component {
   componentDidMount() {
     const {
-      match, fetchAllChats, fetchMyChats, setActiveChat, socketsConnect, mountChat,
+      match,
+      fetchAllChats,
+      fetchMyChats,
+      setActiveChat,
+      socketsConnect,
+      mountChat,
     } = this.props;
 
-    Promise.all([
-      fetchAllChats(),
-      fetchMyChats(),
-    ])
+    Promise.all([fetchAllChats(), fetchMyChats()])
       .then(() => {
         socketsConnect();
       })
@@ -43,9 +45,18 @@ class ChatPage extends React.Component {
 
   render() {
     const {
-      logout, chats, activeUser,
-      createChat, joinChat, leaveChat, deleteChat, sendMessage,
-      messages, editUser, error, isConnected,
+      logout,
+      chats,
+      activeUser,
+      createChat,
+      joinChat,
+      leaveChat,
+      deleteChat,
+      sendMessage,
+      messages,
+      editUser,
+      error,
+      isConnected,
     } = this.props;
 
     return (
@@ -59,11 +70,7 @@ class ChatPage extends React.Component {
           logout={logout}
           editUser={editUser}
         />
-        <Sidebar
-          isConnected={isConnected}
-          chats={chats}
-          createChat={createChat}
-        />
+        <Sidebar isConnected={isConnected} chats={chats} createChat={createChat} />
         <Chat
           isConnected={isConnected}
           messages={messages}

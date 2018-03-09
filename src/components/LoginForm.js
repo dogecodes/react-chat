@@ -19,7 +19,7 @@ class LoginForm extends React.Component {
       value: '',
       isValid: true,
     },
-  }
+  };
 
   handleInputChange = (event) => {
     event.persist();
@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
         value,
       },
     }));
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
     const { username, password } = this.state;
 
     this.props.onSubmit(username.value, password.value);
-  }
+  };
 
   render() {
     const { classes } = this.props;
