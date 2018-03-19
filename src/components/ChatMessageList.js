@@ -28,7 +28,7 @@ class ChatMessageList extends React.Component {
       content: PropTypes.string.isRequired,
       sender: PropTypes.object.isRequired,
       createdAt: PropTypes.string.isRequired,
-    })).isRequired,
+    })),
     match: PropTypes.shape({
       params: PropTypes.object.isRequired,
     }).isRequired,
@@ -40,6 +40,10 @@ class ChatMessageList extends React.Component {
       isCreator: PropTypes.bool.isRequired,
       isChatMember: PropTypes.bool.isRequired,
     }).isRequired,
+  };
+
+  static defaultProps = {
+    messages: [],
   };
 
   componentDidMount() {

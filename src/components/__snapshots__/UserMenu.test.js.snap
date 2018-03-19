@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserMenu /> renders correctly 1`] = `
+<button
+  aria-haspopup="true"
+  aria-owns={null}
+  className="MuiButtonBase-root-37 MuiIconButton-root-31 MuiIconButton-colorInherit-32"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiIconButton-label-36"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root-39 MuiSvgIcon-fontSize-45"
+      color={undefined}
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+      />
+    </svg>
+  </span>
+  <span
+    className="MuiTouchRipple-root-46"
+  />
+</button>
+`;
+
+exports[`<UserMenu /> renders disabled 1`] = `
+<button
+  aria-haspopup="true"
+  aria-owns={null}
+  className="MuiButtonBase-root-37 MuiButtonBase-disabled-38 MuiIconButton-root-31 MuiIconButton-colorInherit-32 MuiIconButton-disabled-35"
+  disabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={-1}
+  type="button"
+>
+  <span
+    className="MuiIconButton-label-36"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root-39 MuiSvgIcon-fontSize-45"
+      color={undefined}
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+      />
+    </svg>
+  </span>
+</button>
+`;

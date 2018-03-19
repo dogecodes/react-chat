@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChatList /> renders correctly 1`] = `
+<ul
+  className="MuiList-root-9 MuiList-padding-10 ChatList-chatsList-7"
+>
+  ChatListItem-12345
+  ChatListItem-54321
+</ul>
+`;
+
+exports[`<ChatList /> renders without chats 1`] = `
+<ul
+  className="MuiList-root-9 MuiList-padding-10 ChatList-chatsList-7"
+>
+  <h3
+    className="MuiTypography-root-13 MuiTypography-subheading-20 ChatList-noChats-8"
+  >
+    There is no chats yet...
+  </h3>
+</ul>
+`;
