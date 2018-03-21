@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import config from '../config';
 
 export default function callApi(endpoint, token, options, payload) {
   const authHeaders = token
@@ -7,7 +8,7 @@ export default function callApi(endpoint, token, options, payload) {
     }
     : {};
 
-  return fetch(`http://localhost:8000/v1/${endpoint}`, {
+  return fetch(`${config.API_URI}/${endpoint}`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
