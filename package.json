@@ -2,6 +2,7 @@
   "name": "react-chat",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://dogecodes.github.io/react-chat",
   "dependencies": {
     "classnames": "^2.2.5",
     "history": "^4.7.2",
@@ -32,6 +33,8 @@
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier-eslint --write '**/*.{js,json}'",
+    "deploy":
+      "npm run build && gh-pages -d build -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add",
     "precommit": "lint-staged"
   },
   "devDependencies": {
@@ -41,6 +44,7 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier-eslint-cli": "^4.7.1",
