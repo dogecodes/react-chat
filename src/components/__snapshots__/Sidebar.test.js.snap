@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> renders correctly 1`] = `
+<div
+  className="MuiDrawer-docked-91"
+>
+  <div
+    className="MuiPaper-root-102 MuiPaper-shadow0-104 MuiDrawer-paper-92 Sidebar-drawerPaper-89 MuiDrawer-paperAnchorLeft-93 MuiDrawer-paperAnchorDockedLeft-97"
+  >
+    <div
+      className="Sidebar-drawerHeader-90"
+    >
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-129 MuiFormControl-marginNormal-130 MuiFormControl-fullWidth-132"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="MuiInput-root-133 MuiInput-fullWidth-141 MuiInput-formControl-134 MuiInput-inkbar-135 MuiInput-underline-139"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            aria-required={false}
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-142"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder="Search chats..."
+            readOnly={undefined}
+            required={undefined}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root-148 MuiDivider-default-150"
+    />
+    ChatList
+    NewChatButton
+    <div
+      className="MuiBottomNavigation-root-153"
+    >
+      <button
+        className="MuiButtonBase-root-161 MuiBottomNavigationAction-root-154 MuiBottomNavigationAction-selected-155"
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiBottomNavigationAction-wrapper-157"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-163"
+            color={undefined}
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
+            />
+          </svg>
+          <span
+            className="MuiBottomNavigationAction-label-158 MuiBottomNavigationAction-selectedLabel-159"
+          >
+            My Chats
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-170"
+        />
+      </button>
+      <button
+        className="MuiButtonBase-root-161 MuiBottomNavigationAction-root-154"
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiBottomNavigationAction-wrapper-157"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-163"
+            color={undefined}
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z"
+            />
+          </svg>
+          <span
+            className="MuiBottomNavigationAction-label-158"
+          >
+            Explore
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-170"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageInput /> renders button 1`] = `
+<div
+  className="MessageInput-messageInputWrapper-45"
+>
+  <div
+    className="MuiPaper-root-47 MuiPaper-shadow6-55 MuiPaper-rounded-48 MessageInput-messageInput-46"
+  >
+    <button
+      className="MuiButtonBase-root-104 MuiButton-root-89 MuiButton-raised-94 MuiButton-raisedPrimary-96 MuiButton-fullWidth-103"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-90"
+      >
+        Join
+      </span>
+      <span
+        className="MuiTouchRipple-root-106"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<MessageInput /> renders disabled button 1`] = `
+<div
+  className="MessageInput-messageInputWrapper-45"
+>
+  <div
+    className="MuiPaper-root-47 MuiPaper-shadow6-55 MuiPaper-rounded-48 MessageInput-messageInput-46"
+  >
+    <button
+      className="MuiButtonBase-root-104 MuiButtonBase-disabled-105 MuiButton-root-89 MuiButton-raised-94 MuiButton-raisedPrimary-96 MuiButton-disabled-98 MuiButton-fullWidth-103"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-90"
+      >
+        Join
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<MessageInput /> renders disabled input 1`] = `
+<div
+  className="MessageInput-messageInputWrapper-45"
+>
+  <div
+    className="MuiPaper-root-47 MuiPaper-shadow6-55 MuiPaper-rounded-48 MessageInput-messageInput-46"
+  >
+    <div
+      className="MuiInput-root-74 MuiInput-disabled-79 MuiInput-fullWidth-82 MuiInput-inkbar-76 MuiInput-underline-80"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+    >
+      <input
+        aria-invalid={undefined}
+        aria-required={undefined}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInput-input-83 MuiInput-inputDisabled-85"
+        defaultValue={undefined}
+        disabled={true}
+        id={undefined}
+        name={undefined}
+        onChange={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder="Type your message…"
+        readOnly={undefined}
+        required={undefined}
+        rows={undefined}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<MessageInput /> renders input 1`] = `
+<div
+  className="MessageInput-messageInputWrapper-45"
+>
+  <div
+    className="MuiPaper-root-47 MuiPaper-shadow6-55 MuiPaper-rounded-48 MessageInput-messageInput-46"
+  >
+    <div
+      className="MuiInput-root-74 MuiInput-fullWidth-82 MuiInput-inkbar-76 MuiInput-underline-80"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+    >
+      <input
+        aria-invalid={undefined}
+        aria-required={undefined}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInput-input-83"
+        defaultValue={undefined}
+        disabled={false}
+        id={undefined}
+        name={undefined}
+        onChange={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder="Type your message…"
+        readOnly={undefined}
+        required={undefined}
+        rows={undefined}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
